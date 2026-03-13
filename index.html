@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ANUBIS GYM | Dolor de hoy, orgullo de mañana</title>
+<title>Anubis Gym | Dolor de hoy, orgullo de mañana</title>
 
-<meta name="description" content="ANUBIS GYM. Gimnasio y entrenamiento fitness. Musculación, entrenamiento y disciplina. Somos tu gimnasio, somos tu familia.">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
-body{
+*{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#0a0a0a;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins', sans-serif;
+background:#0b1320;
 color:white;
+}
+
+h1,h2,h3{
+font-family:'Bebas Neue', cursive;
+letter-spacing:2px;
 }
 
 .container{
@@ -24,198 +33,274 @@ max-width:1100px;
 margin:auto;
 }
 
-header{
-background:#111;
-padding:20px 0;
-border-bottom:1px solid #222;
-}
-
-.brand{
-display:flex;
-align-items:center;
-gap:10px;
-font-weight:bold;
-font-size:20px;
-}
+/* NAV */
 
 nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:20px 0;
+}
+
+.logo{
+font-size:28px;
+color:#ffd000;
 }
 
 nav a{
-color:white;
 text-decoration:none;
+color:white;
 margin-left:20px;
-font-size:14px;
+font-weight:500;
 }
 
+/* HERO */
+
 .hero{
-padding:100px 0;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48');
+background-size:cover;
+background-position:center;
+padding:120px 20px;
 text-align:center;
-background:url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61") center/cover no-repeat;
 }
 
 .hero h1{
-font-size:50px;
-margin-bottom:20px;
+font-size:60px;
+color:#ffd000;
 }
 
 .hero p{
-max-width:600px;
-margin:auto;
-opacity:0.8;
+margin-top:10px;
+font-size:20px;
 }
 
 .btn{
 display:inline-block;
-margin-top:30px;
-padding:15px 25px;
-background:#ff7a00;
-color:white;
+margin-top:25px;
+background:#ffd000;
+color:#000;
+padding:14px 28px;
+border-radius:6px;
+font-weight:600;
 text-decoration:none;
-border-radius:30px;
-font-weight:bold;
+transition:0.3s;
 }
 
-.section{
+.btn:hover{
+background:white;
+}
+
+/* ABOUT */
+
+.about{
 padding:80px 0;
+text-align:center;
 }
 
-.section h2{
-text-align:center;
-margin-bottom:40px;
-font-size:32px;
+.about h2{
+color:#ffd000;
+font-size:40px;
+margin-bottom:20px;
+}
+
+.about p{
+max-width:700px;
+margin:auto;
+line-height:1.6;
+}
+
+/* BENEFITS */
+
+.benefits{
+padding:70px 0;
+background:#111a2e;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 }
 
 .card{
-background:#111;
+background:#0e1728;
 padding:30px;
-border-radius:15px;
-border:1px solid #222;
+border-radius:10px;
+text-align:center;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card h3{
-margin-top:0;
+color:#ffd000;
+margin-bottom:10px;
 }
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
+/* TRAINERS */
+
+.trainers{
+padding:80px 0;
+text-align:center;
 }
 
-.gallery img{
+.trainers h2{
+color:#ffd000;
+margin-bottom:40px;
+}
+
+.trainer{
+background:#111a2e;
+padding:20px;
+border-radius:10px;
+}
+
+.trainer img{
 width:100%;
 border-radius:10px;
 }
 
-.contact{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+.trainer h3{
+margin-top:10px;
 }
 
-footer{
-margin-top:60px;
-background:#111;
-padding:20px;
+/* CTA */
+
+.cta{
+padding:90px 20px;
+background:linear-gradient(90deg,#ffd000,#ffb700);
+color:black;
 text-align:center;
-border-top:1px solid #222;
-font-size:14px;
 }
 
-footer a{
-color:#ff7a00;
+.cta h2{
+font-size:42px;
+}
+
+.cta a{
+margin-top:20px;
+display:inline-block;
+background:black;
+color:#ffd000;
+padding:14px 28px;
 text-decoration:none;
+border-radius:6px;
 font-weight:bold;
 }
 
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-width:60px;
-height:60px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
+/* MAP */
+
+.map{
+padding:60px 0;
+text-align:center;
+}
+
+iframe{
+width:100%;
+height:300px;
+border:none;
+border-radius:10px;
+}
+
+/* FOOTER */
+
+footer{
+background:#070d18;
+text-align:center;
+padding:25px;
+font-size:14px;
+color:#aaa;
+}
+
+footer a{
+color:#ffd000;
 text-decoration:none;
-font-size:30px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:18px;
+}
+
 }
 
 </style>
-
 </head>
+
 <body>
 
-<header>
 <div class="container">
+
 <nav>
-
-<div class="brand">
-ANUBIS GYM
-</div>
-
+<div class="logo">ANUBIS GYM</div>
 <div>
-<a href="#servicios">Servicios</a>
-<a href="#galeria">Galería</a>
-<a href="#contacto">Contacto</a>
+<a href="#">Inicio</a>
+<a href="#">Entrenamiento</a>
+<a href="#">Profesores</a>
+<a href="#">Contacto</a>
 </div>
-
 </nav>
-</div>
-</header>
 
+</div>
 
 <section class="hero">
 
+<h1>DOLOR DE HOY<br>ORGULLO DE MAÑANA</h1>
+
+<p>Somos tu gimnasio, somos tu familia.</p>
+
+<a class="btn" href="#contacto">Empezar hoy</a>
+
+</section>
+
+<section class="about">
+
 <div class="container">
 
-<h1>Dolor de hoy, orgullo de mañana</h1>
+<h2>NUESTRO GIMNASIO</h2>
 
 <p>
-Somos tu gimnasio, somos tu familia. Un lugar donde entrenar fuerte, mejorar tu físico
-y superar tus propios límites.
+En Anubis Gym creemos que el entrenamiento es más que levantar peso.
+Es disciplina, constancia y comunidad. Nuestro espacio está pensado
+para que cada persona pueda superar sus límites y convertirse en su mejor versión.
 </p>
-
-<a class="btn" href="https://wa.me/5490000000000">Consultar por WhatsApp</a>
 
 </div>
 
 </section>
 
-
-<section class="section" id="servicios">
+<section class="benefits">
 
 <div class="container">
-
-<h2>Entrenamientos</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>Musculación</h3>
-<p>Entrenamiento con pesas para desarrollar fuerza, masa muscular y mejorar tu físico.</p>
+<h3>Equipamiento</h3>
+<p>Máquinas modernas y espacio amplio para entrenar cómodo.</p>
 </div>
 
 <div class="card">
-<h3>Fitness</h3>
-<p>Rutinas dinámicas para mejorar tu resistencia, coordinación y condición física.</p>
+<h3>Profesores</h3>
+<p>Entrenadores capacitados para ayudarte a progresar.</p>
 </div>
 
 <div class="card">
-<h3>Entrenamiento Personalizado</h3>
-<p>Planes de entrenamiento adaptados a tus objetivos y nivel.</p>
+<h3>Rutinas</h3>
+<p>Planes personalizados para cada objetivo.</p>
+</div>
+
+<div class="card">
+<h3>Comunidad</h3>
+<p>Un ambiente motivador donde todos crecen juntos.</p>
 </div>
 
 </div>
@@ -224,21 +309,31 @@ y superar tus propios límites.
 
 </section>
 
-
-<section class="section" id="galeria">
+<section class="trainers">
 
 <div class="container">
 
-<h2>El gimnasio</h2>
+<h2>NUESTROS PROFESORES</h2>
 
-<div class="gallery">
+<div class="grid">
 
-<img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48">
-<img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b">
-<img src="https://images.unsplash.com/photo-1594737625785-c1f0c7c3a0e4">
-<img src="https://images.unsplash.com/photo-1581009137042-c552e485697a">
-<img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1">
-<img src="https://images.unsplash.com/photo-1584467735871-8e39a16f7c30">
+<div class="trainer">
+<img src="https://images.unsplash.com/photo-1605296867424-35fc25c9212a">
+<h3>Coach Fitness</h3>
+<p>Entrenamiento funcional</p>
+</div>
+
+<div class="trainer">
+<img src="https://images.unsplash.com/photo-1594737625785-cfcb4d82c8b3">
+<h3>Coach Fuerza</h3>
+<p>Musculación avanzada</p>
+</div>
+
+<div class="trainer">
+<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438">
+<h3>Coach Cardio</h3>
+<p>Entrenamiento HIIT</p>
+</div>
 
 </div>
 
@@ -246,67 +341,35 @@ y superar tus propios límites.
 
 </section>
 
+<section class="cta">
 
-<section class="section" id="contacto">
+<h2>¿LISTO PARA EMPEZAR?</h2>
+
+<p>Escribinos y sumate a la familia Anubis.</p>
+
+<a href="https://instagram.com/anubis.gymok">Enviar mensaje</a>
+
+</section>
+
+<section class="map" id="contacto">
 
 <div class="container">
 
-<h2>Contacto</h2>
+<h2>DONDE ESTAMOS</h2>
 
-<div class="contact">
-
-<div class="card">
-
-<h3>ANUBIS GYM</h3>
-
-<p>
-Dolor de hoy, orgullo de mañana.<br>
-Somos tu gimnasio, somos tu familia.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Ubicación</h3>
-
-<p>
-Primera Junta 660<br>
-1° Piso
-</p>
-
-<p>
-Primera Junta 531
-</p>
-
-<p>
-Consultanos por WhatsApp para horarios y más información.
-</p>
-
-</div>
-
-</div>
+<iframe src="https://maps.google.com/maps?q=San%20Miguel%20Buenos%20Aires&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
 
 </div>
 
 </section>
-
 
 <footer>
 
-ANUBIS GYM — Gimnasio y entrenamiento fitness  
-<br><br>
-
-Diseñado por  
-<a href="https://r-a-studio-nup2.onrender.com/">R.A Studio</a>
+© 2026 Anubis Gym  
+<br>
+Diseñado por <a href="https://r-a-studio-nup2.onrender.com/">R.A Studio</a>
 
 </footer>
-
-
-<a class="whatsapp" href="https://wa.me/5490000000000">
-💬
-</a>
-
 
 </body>
 </html>
